@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knife N Gun</title>
 
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <!-- icon -->
     <link rel="icon" type="image/png" href="./media/icon.png">
 
@@ -131,7 +134,7 @@
                     Find the killer before the next victim falls.
                 </p>
 
-                <button class="hero-btn">
+                <button class="hero-btn" onclick='msg("📽️ The security cameras were erased. The witnesses disappeared. The trailer is still classified. Coming soon...");'>
                     WATCH TRAILER
                 </button>
 
@@ -242,7 +245,7 @@
                         removes them from the game.
                     </p>
         
-                    <button class="role-btn">
+                    <button class="role-btn" onclick='msg("⚠️ Classified Record. Viewing this characters full profile is currently restricted.")'>
                         LEARN MORE
                     </button>
         
@@ -297,178 +300,430 @@
         
             <div class="story-header">
         
-                <span>LORE</span>
-        
+                <span>CLASSIFIED RECORDS</span>
+
                 <h1>
-                    THE STORY OF
-                    <br>
                     KNIFE N GUN
+                    <br>
+                    INVESTIGATION BOARD
                 </h1>
         
             </div>
         
-            <div class="story-container">
-        
-                <div class="story-image-wrapper">
-        
+            <div class="investigation-board">
+
+                <!-- MAIN STORY -->
+            
+                <div class="board-card card-large" onclick='msg(" CASE FILE #021 contains sensitive evidence related to an ongoing murder investigation. File access is temporarily restricted.");'>
+
+    <video class="board-video" autoplay muted loop playsinline>
+        <source src="./media/story.mp4" type="video/mp4">
+    </video>
+
+    <div class="card-info">
+
+        <h2>CASE FILE #021</h2>
+
+        <p>
+            A peaceful town once thrived under the
+            cover of darkness. Then the murders
+            began.
+
+            Nobody knows who the killer is.
+
+            Every citizen is a suspect.
+        </p>
+
+    </div>
+
+</div>
+            
+                <!-- INVESTIGATION -->
+            
+                <div class="board-card" onclick='msg("🕵️ The investigation room is currently sealed. Detectives are working around the clock to uncover the killer identity.");'>
+            
+                    <div class="card-info">
+            
+                        <h2>INVESTIGATION</h2>
+            
+                        <p>
+                            Detectives search for clues before
+                            another victim falls.
+                        </p>
+            
+                    </div>
+            
                     <img
-                    src="./media/story.png"
-                    class="story-image"
-                    id="storyImage">
-        
+                    src="./media/board.jpg"
+                    class="board-image">
+            
                 </div>
-        
-                <div class="story-content">
-        
-                    <p>
-                        A peaceful town once thrived under the cover
-                        of darkness. But strange murders began to
-                        occur every night. Fear spread quickly.
-        
-                        Nobody knew who to trust.
-        
-                        Hidden among ordinary citizens, ruthless
-                        killers silently hunted their victims while
-                        detectives raced against time to uncover the
-                        truth.
-        
-                        Every discussion could save a life.
-        
-                        Every vote could condemn the innocent.
-                    </p>
-        
+            
+                <!-- MURDER -->
+            
+                <div class="board-card" onclick='msg(" MURDER MODE\nA body has been found. Trust no one, gather clues, and uncover the killer before another victim falls.");'>
+            
+                    <div class="card-info">
+            
+                        <h2>MURDER</h2>
+            
+                        <p>
+                            Under the cover of darkness the killers
+                            choose their next victim.
+                        </p>
+            
+                    </div>
+            
+                    <img
+                    src="./media/dead.png"
+                    class="board-image">
+            
                 </div>
-        
+            
+                <!-- TRIAL -->
+            
+                <div class="board-card" onclick='msg("⚖️ TRIAL MODE\nThe suspects have gathered. Present evidence, challenge alibis, and vote carefully—the wrong choice could be fatal.");'>
+            
+                    <div class="card-info">
+            
+                        <h2>TRIAL</h2>
+            
+                        <p>
+                            The town gathers to discuss and accuse.
+                            One vote can change everything.
+                        </p>
+            
+                    </div>
+            
+                    <img
+                    src="./media/trial.png"
+                    class="board-image">
+            
+                </div>
+            
+                <!-- SURVIVAL -->   
+            
+                <div class="board-card" onclick='msg("SURVIVAL MODE\nThe killer is still out there. Stay alert, form alliances, and survive long enough to see the truth revealed.");'>
+            
+                    <div class="card-info">
+            
+                        <h2>SURVIVAL</h2>
+            
+                        <p>
+                            Outsmart the killers and survive long
+                            enough to uncover the truth.
+                        </p>
+            
+                    </div>
+            
+                    <img
+                    src="./media/survival.png"
+                    class="board-image">
+            
+                </div>
+            
+                <!-- SECRET FILE -->
+            
+                <div class="board-card secret-card" onclick='msg("🔒 CONFIDENTIAL\nThis information is restricted to authorized investigators only. Unauthorized access is prohibited.");'>
+
+                    <div class="crime-ribbon">
+                        CONFIDENTIAL
+                    </div>
+                
+                    <div class="card-info">
+                
+                        <h2>RESTRICTED FILE</h2>
+                
+                        <p>
+                            Access Denied.
+                            Classified information hidden.
+                        </p>
+                
+                    </div>
+                
+                    <div class="secret-lock">
+                        🔒
+                    </div>
+                
+                </div>
+            
             </div>
-        
-            <div class="story-timeline">
-        
-                <div class="timeline-item active">
-                    Investigation
-                </div>
-        
-                <div class="timeline-line"></div>
-        
-                <div class="timeline-item">
-                    Murder
-                </div>
-        
-                <div class="timeline-line"></div>
-        
-                <div class="timeline-item">
-                    Trial
-                </div>
-        
-                <div class="timeline-line"></div>
-        
-                <div class="timeline-item">
-                    Survival
-                </div>
-        
-            </div>
-        
-        </section>
+            
+            </section>
 
 
         <!-- contact -->
-        <section class="contact-section" id="contact">
+        <section class="final-report-section" id="contact">
+            
 
-            <div class="contact-bg"></div>
-        
-            <div class="contact-particles"></div>
-        
-            <div class="contact-container">
-        
-                <div class="contact-left">
-        
-                    <span>FINAL REPORT</span>
-        
-                    <h1>
-                        THE INVESTIGATION
-                        <br>
-                        NEVER ENDS
-                    </h1>
-        
-                    <p>
-                        Every mystery leaves behind traces.
-                        Every story leaves behind a witness.
-        
-                        If you reached this point,
-                        you uncovered the truth behind
-                        Knife N Gun.
-        
-                        But one final file remains...
-                    </p>
-        
-                    <div class="case-file">
-        
-                        <h3>CASE FILE #2505</h3>
-        
-                        <p>
-                            Identity:
-                            UNKNOWN
-                        </p>
-        
-                        <p>
-                            Role:
-                            CREATOR
-                        </p>
-        
-                        <p>
-                            Status:
-                            OBSERVING
-                        </p>
-        
+    <!-- Background -->
+
+    <div class="report-bg"></div>
+
+    <div class="report-overlay"></div>
+    <div class="crime-tape tape-1">
+        CRIME SCENE • DO NOT CROSS • CRIME SCENE • DO NOT CROSS
+    </div>
+    
+    <div class="crime-tape tape-2">
+        EVIDENCE • RESTRICTED AREA • EVIDENCE • RESTRICTED AREA
+    </div>
+    
+    <img src="./media/confidential-stamp.png"
+    class="stamp stamp-1">
+    
+    <img src="./media/suspect-photo.png"
+    class="suspect-photo">
+    
+    <img src="./media/red-string.png"
+    class="red-string">
+
+    <!-- Top Area -->
+
+    <div class="report-container">
+
+        <!-- LEFT -->
+
+        <div class="report-left">
+
+            <div class="report-tag">
+
+                ♦ FINAL REPORT ♦
+
+            </div>
+
+            <img
+src="./media/fingerprint.png"
+class="title-print">
+            <h1>
+
+                THE INVESTIGATION
+
+                <span>NEVER ENDS</span>
+
+            </h1>
+
+            <p class="report-desc">
+
+                Every mystery leaves behind traces.
+
+                Every story leaves behind a witness.
+
+                <br><br>
+
+                If you reached this point,
+
+                you uncovered the truth behind
+
+                Knife N Gun.
+
+                <br><br>
+
+                But one final file remains...
+
+            </p>
+
+            <!-- Case Overview -->
+
+            <div class="case-overview">
+
+                <div class="overview-header">
+
+                    CASE OVERVIEW
+
+                </div>
+
+                <div class="overview-grid">
+
+                    <div class="overview-item">
+
+                        <span>CASE ID</span>
+
+                        <p>KNIFE-N-GUN-2505</p>
+
                     </div>
-        
+
+                    <div class="overview-item">
+
+                        <span>IDENTITY</span>
+
+                        <p>UNKNOWN</p>
+
+                    </div>
+
+                    <div class="overview-item">
+
+                        <span>ROLE</span>
+
+                        <p>CREATOR</p>
+
+                    </div>
+
+                    <div class="overview-item">
+
+                        <span>STATUS</span>
+
+                        <p>OBSERVING</p>
+
+                    </div>
+
                 </div>
-        
-                <div class="contact-right">
-        
+
+                <div class="fingerprint">
+
                     <img
-                    src="./media/developer.png"
-                    class="developer-image"
-                    id="developerImage">
-        
-                    <div class="developer-glow"></div>
-        
+                    src="./media/fingerprint.png"
+                    alt="fingerprint">
+
                 </div>
-        
+
             </div>
-        
-            <div class="hidden-links">
-        
-                <a
-                href="mailto:sskumar20sign@gmail.com"
-                target="_blank">
-        
-                    ACCESS FILE 01
-        
-                </a>
-        
-                <a
-                href="https://github.com/SSKumar-21"
-                target="_blank">
-        
-                    ACCESS FILE 02
-        
-                </a>
-        
-                <a
-                href="https://www.linkedin.com/in/sidharth-kumar-059269294/"
-                target="_blank">
-        
-                    ACCESS FILE 03
-        
-                </a>
-        
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="report-right" onclick='msg("📂 CONFIDENTIAL FILE\nSeveral pages are missing, key evidence has been redacted, and the truth remains hidden.");'>
+
+            <div class="folder-container">
+
+                <img
+src="./media/fingerprint.png"
+class="folder-fingerprint">
+<div class="scan-beam"></div>
+                <img
+                src="./media/folder.png"
+                alt="confidential file"
+                class="folder-image">
+
             </div>
-        
-        </section>
+
+        </div>
+
+    </div>
+
+    <!-- CONNECTION TITLE -->
+
+    <div class="connection-title">
+
+        <span></span>
+
+        ESTABLISH SECURE CONNECTION
+
+        <span></span>
+
+    </div>
+
+    <!-- CONTACT FILES -->
+
+    <div class="contact-files">
+
+        <!-- EMAIL -->
+    
+        <a
+        href="mailto:sskumar20sign@gmail.com"
+        class="file-card email-card">
+    
+            <div class="file-icon">
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+    
+            <h3>
+                EMAIL DOSSIER
+            </h3>
+    
+            <p>
+                Send a message
+            </p>
+    
+            <span>
+                ACCESS CHANNEL »
+            </span>
+    
+        </a>
+    
+        <!-- GITHUB -->
+    
+        <a
+        href="https://github.com/SSKumar-21"
+        target="_blank"
+        class="file-card github-card">
+    
+            <div class="file-icon">
+                <i class="fa-brands fa-github"></i>
+            </div>
+    
+            <h3>
+                GITHUB ARCHIVE
+            </h3>
+    
+            <p>
+                View repositories
+            </p>
+    
+            <span>
+                ACCESS CHANNEL »
+            </span>
+    
+        </a>
+    
+        <!-- PROJECT ARCHIVE -->
+    
+        <a
+        href="https://github.com/SSKumar-21/KnifeNGun.git"
+        class="file-card portfolio-card">
+    
+            <div class="file-icon">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+    
+            <h3>
+                CASE ARCHIVE
+            </h3>
+    
+            <p>
+                Explore all investigations
+            </p>
+    
+            <span>
+                ACCESS CHANNEL »
+            </span>
+    
+        </a>
+    
+        <!-- LINKEDIN -->
+    
+        <a
+        href="https://www.linkedin.com/in/sidharth-kumar-059269294/"
+        target="_blank"
+        class="file-card linkedin-card">
+    
+            <div class="file-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+    
+            <h3>
+                LINKEDIN RECORD
+            </h3>
+    
+            <p>
+                Professional profile
+            </p>
+    
+            <span>
+                ACCESS CHANNEL »
+            </span>
+    
+        </a>
+    
+    </div>
+
+</section>
     </div>
 
 
     </div>
+
 
     <script src="./script/index.js"></script>
     <script src="./script/hero.js"></script>
@@ -477,6 +732,6 @@
     <script src="./script/role.js"></script>
     <script src="./script/story.js"></script>
     <script src="./script/contact.js"></script>
-
+    <script src="./script/alerting.js"></script>
 </body>
 </html>

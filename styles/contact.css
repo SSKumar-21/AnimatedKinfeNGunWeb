@@ -1,195 +1,1022 @@
-.contact-section{
+/* ===================================
+FINAL REPORT SECTION
+=================================== */
 
+.final-report-section{
+
+   
     min-height:100vh;
-
-    background:#040816;
-
+    
     position:relative;
-
+    
     overflow:hidden;
-
+    
     padding:120px 8%;
-}
-
-.contact-bg{
-
+    
+    background:#050816;
+   
+    
+    }
+    
+    /* ===================================
+    BACKGROUND
+    =================================== */
+    
+    .report-bg{
+    
+   
     position:absolute;
-
+    
     inset:0;
-
+    
     background:
-
-    radial-gradient(
-    circle at 70% 50%,
-    rgba(255,215,0,.12),
-    transparent 40%),
-
-    radial-gradient(
-    circle at 20% 50%,
-    rgba(46,158,255,.12),
-    transparent 40%);
-}
-
-.contact-container{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    position:relative;
-
-    z-index:2;
-}
-
-.contact-left{
-
-    width:45%;
-}
-
-.contact-left span{
-
-    color:#ffd700;
-
-    letter-spacing:4px;
-}
-
-.contact-left h1{
-
-    font-size:5rem;
-
-    color:white;
-
-    margin:20px 0;
-
-    line-height:1;
-
-    text-shadow:
-    0 0 40px rgba(255,215,0,.3);
-}
-
-.contact-left p{
-
-    color:#d5d5d5;
-
-    line-height:2;
-}
-
-.case-file{
-
-    margin-top:40px;
-
-    padding:30px;
-
-    border:1px solid
-    rgba(255,255,255,.1);
-
-    backdrop-filter:
-    blur(15px);
-
-    border-radius:15px;
-}
-
-.case-file h3{
-
-    color:#ffd700;
-
-    margin-bottom:20px;
-}
-
-.contact-right{
-
-    position:relative;
-}
-
-.developer-image{
-
-    height:800px;
-
-    position:relative;
-
-    z-index:2;
-
-    animation:
-    floatDev 5s ease-in-out infinite;
-}
-
-.developer-glow{
-
-    position:absolute;
-
-    width:500px;
-    height:500px;
-
-    background:
-    radial-gradient(
-    circle,
-    rgba(255,215,0,.4),
-    transparent);
-
-    filter:blur(100px);
-
+    linear-gradient(
+        rgba(2,6,20,.90),
+        rgba(2,6,20,.95)
+    ),
+    url("./media/investigation-board-bg.jpg");
+    
+    background-size:cover;
+    background-position:center;
+    
     z-index:1;
-
-    top:50%;
-
-    left:50%;
-
-    transform:
-    translate(-50%,-50%);
-}
-
-.hidden-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:40px;
-
-    margin-top:80px;
-
-    position:relative;
-
+   
+    
+    }
+    
+    .report-overlay{
+    
+   
+    position:absolute;
+    
+    inset:0;
+    
+    background:
+    radial-gradient(
+        circle at 75% 40%,
+        rgba(255,0,0,.12),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at 20% 30%,
+        rgba(46,158,255,.15),
+        transparent 35%
+    );
+    
+    z-index:2;
+   
+    
+    }
+    
+    /* ===================================
+    DECORATIONS
+    =================================== */
+    
+    .crime-tape{
+    
+   
+    position:absolute;
+    
+    background:#ffd000;
+    
+    color:#000;
+    
+    font-weight:900;
+    
+    letter-spacing:2px;
+    
+    padding:12px 0;
+    
+    text-align:center;
+    
     z-index:3;
-}
-
-.hidden-links a{
-
-    text-decoration:none;
-
+    
+    opacity:.15;
+    
+    pointer-events:none;
+   
+    
+    }
+    
+    .tape-1{
+    
+   
+    width:140%;
+    
+    top:12%;
+    
+    left:-15%;
+    
+    transform:rotate(-8deg);
+   
+    
+    }
+    
+    .tape-2{
+    
+   
+    width:140%;
+    
+    bottom:15%;
+    
+    left:-15%;
+    
+    transform:rotate(7deg);
+   
+    
+    }
+    
+    .stamp{
+    
+   
+    position:absolute;
+    
+    width:220px;
+    
+    opacity:.15;
+    
+    right:10%;
+    
+    top:12%;
+    
+    transform:rotate(-15deg);
+    
+    z-index:3;
+   
+    
+    }
+    
+    .suspect-photo{
+    
+   
+    position:absolute;
+    
+    width:180px;
+    
+    left:8%;
+    
+    bottom:18%;
+    
+    opacity:.12;
+    
+    transform:rotate(-8deg);
+    
+    z-index:3;
+   
+    
+    }
+    
+    .red-string{
+    
+   
+    position:absolute;
+    
+    width:450px;
+    
+    right:12%;
+    
+    bottom:20%;
+    
+    opacity:.08;
+    
+    z-index:3;
+   
+    
+    }
+    
+    /* ===================================
+    LAYOUT
+    =================================== */
+    
+    .report-container{
+    
+   
+    display:flex;
+    
+    justify-content:space-between;
+    
+    align-items:center;
+    
+    gap:80px;
+    
+    position:relative;
+    
+    z-index:5;
+   
+    
+    }
+    
+    .report-left{
+    
+   
+    flex:1;
+   
+    
+    }
+    
+    .report-right{
+    
+   
+    flex:1;
+    
+    display:flex;
+    
+    justify-content:center;
+    
+    align-items:center;
+   
+    
+    }
+    
+    /* ===================================
+    TEXT
+    =================================== */
+    
+    .report-tag{
+    
+   
+    color:#ffd700;
+    
+    letter-spacing:4px;
+    
+    margin-bottom:20px;
+    
+    font-size:.9rem;
+   
+    
+    }
+    
+    .report-left h1{
+    
+   
     color:white;
-
-    padding:15px 30px;
-
+    
+    font-size:6rem;
+    
+    line-height:.95;
+    
+    text-transform:uppercase;
+    
+    margin-bottom:30px;
+    
+    font-family:
+    "Black Ops One",
+    system-ui;
+   
+    
+    }
+    
+    .report-left h1 span{
+    
+   
+    color:#ff3434;
+    
+    display:block;
+    
+    text-shadow:
+    0 0 15px rgba(255,0,0,.4),
+    0 0 40px rgba(255,0,0,.2);
+   
+    
+    }
+    
+    .report-desc{
+    
+   
+    color:#d7d7d7;
+    
+    line-height:2;
+    
+    max-width:650px;
+    
+    font-family:
+    "Chelsea Market",
+    system-ui;
+   
+    
+    }
+    
+    /* ===================================
+    CASE OVERVIEW
+    =================================== */
+    
+    .case-overview{
+    
+   
+    margin-top:50px;
+    
+    padding:35px;
+    
+    border-radius:20px;
+    
+    background:
+    rgba(255,255,255,.03);
+    
     border:1px solid
-    rgba(255,255,255,.15);
-
-    border-radius:50px;
-
-    transition:.4s;
-}
-
-.hidden-links a:hover{
-
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 0 20px #ffd700;
-}
-
-@keyframes floatDev{
-
+    rgba(255,255,255,.08);
+    
+    backdrop-filter:blur(10px);
+    
+    position:relative;
+    
+    overflow:hidden;
+   
+    
+    }
+    
+    .case-overview::before{
+    
+   
+    content:"";
+    
+    position:absolute;
+    
+    inset:0;
+    
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.05),
+        transparent
+    );
+    
+    transform:translateX(-100%);
+    
+    transition:1.5s;
+   
+    
+    }
+    
+    .case-overview:hover::before{
+    
+   
+    transform:translateX(100%);
+   
+    
+    }
+    
+    .case-overview::after{
+    
+   
+    content:"CONFIDENTIAL";
+    
+    position:absolute;
+    
+    top:20px;
+    
+    right:20px;
+    
+    border:3px solid #ff3434;
+    
+    color:#ff3434;
+    
+    padding:6px 12px;
+    
+    transform:rotate(-12deg);
+    
+    opacity:.7;
+    
+    font-weight:900;
+   
+    
+    }
+    
+    .overview-header{
+    
+   
+    color:#ffd700;
+    
+    margin-bottom:25px;
+    
+    letter-spacing:2px;
+    
+    font-weight:700;
+   
+    
+    }
+    
+    .overview-grid{
+    
+   
+    display:grid;
+    
+    grid-template-columns:
+    repeat(2,1fr);
+    
+    gap:25px;
+   
+    
+    }
+    
+    .overview-item span{
+    
+   
+    color:#8591a8;
+    
+    font-size:.8rem;
+   
+    
+    }
+    
+    .overview-item p{
+    
+   
+    color:white;
+    
+    margin-top:6px;
+    
+    font-weight:700;
+   
+    
+    }
+    
+    /* ===================================
+    FINGERPRINT
+    =================================== */
+    
+    .fingerprint{
+    
+   
+    position:absolute;
+    
+    right:20px;
+    
+    bottom:10px;
+    
+    width:130px;
+    
+    opacity:.12;
+   
+    
+    }
+    
+    .fingerprint img{
+    
+   
+    width:100%;
+    
+    animation:
+    scanPulse 4s infinite;
+   
+    
+    }
+    
+    @keyframes scanPulse{
+    
+   
     0%,100%{
+    
+        opacity:.08;
+    }
+    
+    50%{
+    
+        opacity:.25;
+    }
+   
+    
+    }
+    
+    /* ===================================
+    FOLDER
+    =================================== */
+    
+    .folder-container{
+    
+   
+    position:relative;
+   
+    
+    }
+    
+    .folder-image{
+    
+   
+    width:650px;
+    
+    max-width:100%;
+    
+    transition:.6s ease;
+    
+    filter:
+    drop-shadow(
+        0 0 40px rgba(255,0,0,.15)
+    );
+   
+    
+    }
+    
+    .folder-container:hover .folder-image{
+    
+   
+    transform:
+    rotate(-3deg)
+    scale(1.05);
+    
+    filter:
+    drop-shadow(
+        0 0 60px rgba(255,0,0,.4)
+    );
+   
+    
+    }
+    
+    /* ===================================
+    CONNECTION TITLE
+    =================================== */
+    
+    .connection-title{
+    
+   
+    display:flex;
+    
+    align-items:center;
+    
+    justify-content:center;
+    
+    gap:25px;
+    
+    margin-top:120px;
+    
+    margin-bottom:50px;
+    
+    color:#ffd700;
+    
+    letter-spacing:3px;
+    
+    position:relative;
+    
+    z-index:5;
+   
+    
+    }
+    
+    .connection-title span{
+    
+   
+    width:120px;
+    
+    height:1px;
+    
+    background:#ffd700;
+   
+    
+    }
+    
+    /* ===================================
+    CONTACT FILES
+    =================================== */
+    
+    .contact-files{
+    
+   
+    display:grid;
+    
+    grid-template-columns:
+    repeat(4,1fr);
+    
+    gap:25px;
+    
+    position:relative;
+    
+    z-index:5;
+   
+    
+    }
+    
+    .file-card{
+    
+   
+    text-decoration:none;
+    
+    color:white;
+    
+    padding:35px;
+    
+    border-radius:20px;
+    
+    background:
+    rgba(255,255,255,.03);
+    
+    border:1px solid
+    rgba(255,255,255,.08);
+    
+    backdrop-filter:blur(10px);
+    
+    transition:.4s;
+   
+    
+    }
+    
+    .file-card:hover{
+    
+   
+    transform:
+    translateY(-10px);
+    
+    border-color:
+    rgba(255,255,255,.2);
+   
+    
+    }
+    
+    .file-icon{
+    
+   
+    font-size:2rem;
+    
+    margin-bottom:20px;
+   
+    
+    }
+    
+    .file-card h3{
+    
+   
+    margin-bottom:15px;
+    
+    font-size:1.1rem;
+   
+    
+    }
+    
+    .file-card p{
+    
+   
+    color:#bfc8d8;
+    
+    margin-bottom:20px;
+   
+    
+    }
+    
+    .file-card span{
+    
+   
+    font-size:.8rem;
+    
+    letter-spacing:2px;
+   
+    
+    }
+    
+    /* COLORS */
+    
+    .email-card:hover{
+    
+   
+    box-shadow:
+    0 0 30px rgba(255,60,60,.3);
+   
+    
+    }
+    
+    .github-card:hover{
+    
+   
+    box-shadow:
+    0 0 30px rgba(255,215,0,.3);
+   
+    
+    }
+    
+    .discord-card:hover{
+    
+   
+    box-shadow:
+    0 0 30px rgba(88,101,242,.3);
+   
+    
+    }
+    
+    .linkedin-card:hover{
+    
+   
+    box-shadow:
+    0 0 30px rgba(0,200,255,.3);
+   
+    
+    }
+    
+    /* ===================================
+    RESPONSIVE
+    =================================== */
+    
+    @media(max-width:1100px){
+    
+   
+    .report-container{
+    
+        flex-direction:column;
+    }
+    
+    .report-left h1{
+    
+        font-size:4rem;
+    }
+    
+    .contact-files{
+    
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+   
+    
+    }
+    
+    @media(max-width:700px){
+    
+   
+    .contact-files{
+    
+        grid-template-columns:1fr;
+    }
+    
+    .report-left h1{
+    
+        font-size:3rem;
+    }
+    
+    .connection-title span{
+    
+        width:40px;
+    }
+   
+    
+    }
+    
+    .hidden{
 
+        opacity:0;
+    
+        transform:
+        translateY(80px);
+    
+        transition:
+        1s ease;
+    }
+    
+    .visible{
+    
+        opacity:1;
+    
         transform:
         translateY(0);
     }
 
-    50%{
+    .scan-line{
+
+        position:absolute;
+    
+        left:0;
+    
+        width:100%;
+    
+        height:3px;
+    
+        background:
+        rgba(0,255,255,.8);
+    
+        box-shadow:
+        0 0 10px cyan;
+    
+        pointer-events:none;
+    }   
+
+    .folder-fingerprint{
+
+        position:absolute;
+    
+        width:180px;
+    
+        right:-60px;
+    
+        bottom:30px;
+    
+        opacity:.15;
+    
+        z-index:1;
+    
+        animation:
+        fingerprintPulse 4s infinite;
+    }
+    
+    .folder-fingerprint:hover{
+    
+        opacity:.4;
+    }@keyframes fingerprintPulse{
+
+        0%,100%{
+    
+            opacity:.08;
+    
+            transform:
+            scale(1);
+        }
+    
+        50%{
+    
+            opacity:.22;
+    
+            transform:
+            scale(1.05);
+        }
+    }
+
+
+    .scan-beam{
+
+        position:absolute;
+    
+        width:220px;
+    
+        height:4px;
+    
+        background:#ff3434;
+    
+        box-shadow:
+        0 0 15px #ff3434,
+        0 0 30px #ff3434;
+    
+        bottom:120px;
+    
+        right:-80px;
+    
+        z-index:2;
+    
+        animation:
+        scanBeam 4s infinite;
+    }
+
+    @keyframes scanBeam{
+
+        0%{
+    
+            transform:
+            translateY(-80px);
+    
+            opacity:0;
+        }
+    
+        20%{
+    
+            opacity:1;
+        }
+    
+        100%{
+    
+            transform:
+            translateY(80px);
+    
+            opacity:0;
+        }
+    }
+
+    .folder-container:hover .folder-image{
 
         transform:
-        translateY(-20px);
+        rotate(-4deg)
+        scale(1.08);
+    
+        filter:
+        drop-shadow(
+            0 0 80px rgba(255,0,0,.5)
+        );
     }
-}
+
+    .email-card .file-icon{
+
+        color:#ff5757;
+    }
+    
+    .github-card .file-icon{
+    
+        color:#ffd700;
+    }
+    
+    .linkedin-card .file-icon{
+    
+        color:#00c8ff;
+    }
+    
+    .portfolio-card .file-icon{
+    
+        color:#8a5cff;
+    }
+
+    .file-icon{
+
+        font-size:2.3rem;
+    
+        margin-bottom:25px;
+    }
+
+    .title-print{
+
+        position:absolute;
+    
+        width:280px;
+    
+        left:250px;
+    
+        top:40px;
+    
+        opacity:.04;
+    
+        pointer-events:none;
+    }
+
+    .email-card .file-icon{
+        color:#ff5757;
+    }
+    
+    .github-card .file-icon{
+        color:#ffd700;
+    }
+    
+    .portfolio-card .file-icon{
+        color:#8a5cff;
+    }
+    
+    .linkedin-card .file-icon{
+        color:#00c8ff;
+    }
+    
+    .file-icon{
+        font-size:2.3rem;
+        margin-bottom:25px;
+    }
+
+    .email-card .file-icon{
+        color: transparent;
+        -webkit-text-stroke: 2px #ff5757;
+        text-shadow:
+            0 0 8px #ff5757,
+            0 0 15px #ff5757,
+            0 0 25px #ff5757;
+    }
+    
+    .github-card .file-icon{
+        color: transparent;
+        -webkit-text-stroke: 2px #ffd700;
+        text-shadow:
+            0 0 8px #ffd700,
+            0 0 15px #ffd700,
+            0 0 25px #ffd700;
+    }
+    
+    .portfolio-card .file-icon{
+        color: transparent;
+        -webkit-text-stroke: 2px #8a5cff;
+        text-shadow:
+            0 0 8px #8a5cff,
+            0 0 15px #8a5cff,
+            0 0 25px #8a5cff;
+    }
+    
+    .linkedin-card .file-icon{
+        color: transparent;
+        -webkit-text-stroke: 2px #00c8ff;
+        text-shadow:
+            0 0 8px #00c8ff,
+            0 0 15px #00c8ff,
+            0 0 25px #00c8ff;
+    }
+    
+    .file-icon{
+        font-size: 2.3rem;
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Stronger glow on hover */
+    .email-card:hover .file-icon{
+        text-shadow:
+            0 0 12px #ff5757,
+            0 0 25px #ff5757,
+            0 0 40px #ff5757;
+    }
+    
+    .github-card:hover .file-icon{
+        text-shadow:
+            0 0 12px #ffd700,
+            0 0 25px #ffd700,
+            0 0 40px #ffd700;
+    }
+    
+    .portfolio-card:hover .file-icon{
+        text-shadow:
+            0 0 12px #8a5cff,
+            0 0 25px #8a5cff,
+            0 0 40px #8a5cff;
+    }
+    
+    .linkedin-card:hover .file-icon{
+        text-shadow:
+            0 0 12px #00c8ff,
+            0 0 25px #00c8ff,
+            0 0 40px #00c8ff;
+    }
+
+    
