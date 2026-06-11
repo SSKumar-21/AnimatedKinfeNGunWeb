@@ -1,0 +1,228 @@
+.About{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    background:black;
+}
+
+/* BACKGROUNDS */
+
+.bg1,
+.bg2{
+
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    transition:1s;
+
+    transform:scale(1.08);
+}
+
+.bg1{
+
+    background-image:url("../media/f1.png");
+
+    opacity:1;
+}
+
+.bg2{
+
+    background-image:url("../media/f2.png");
+
+    opacity:0;
+}
+
+/* DARK OVERLAY */
+
+.About::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.85) 20%,
+        rgba(0,0,0,.3) 60%,
+        rgba(0,0,0,.85) 100%
+    );
+
+    z-index:2;
+}
+
+/* STORY AREA */
+
+.about-story{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    padding-left:8%;
+
+    height:400px;
+}
+
+/* TEXT BLOCK */
+
+.story-text{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:
+    translateY(-50%);
+
+    width:500px;
+
+    opacity:0;
+
+    transition:.8s;
+
+    pointer-events:none;
+}
+
+/* LEFT */
+
+#text1{
+
+    left:8%;
+}
+
+/* RIGHT */
+
+#text2{
+
+    right:8%;
+
+    text-align:right;
+}
+
+/* ACTIVE */
+
+.story-text.active{
+
+    opacity:1;
+
+    pointer-events:auto;
+}
+
+/* ROLE TAG */
+
+.role-tag{
+
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    font-size:13px;
+
+    text-transform:uppercase;
+}
+
+/* TITLE */
+
+.story-text h1{
+
+    font-size:6rem;
+
+    color:white;
+
+    margin:15px 0;
+
+    line-height:.9;
+
+    font-family:
+    "Black Ops One",
+    sans-serif;
+}
+
+/* DESCRIPTION */
+
+.story-text p{
+
+    color:#d8d8d8;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+}
+
+/* GLITCH */
+
+.glitch{
+
+    animation:glitch .25s linear 4;
+}
+
+@keyframes glitch{
+
+    0%{
+        transform:translate(0);
+    }
+
+    20%{
+        transform:translate(-8px,3px);
+    }
+
+    40%{
+        transform:translate(8px,-3px);
+    }
+
+    60%{
+        transform:translate(-5px,-3px);
+    }
+
+    80%{
+        transform:translate(5px,3px);
+    }
+
+    100%{
+        transform:translate(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .story-text{
+
+        width:85%;
+
+        left:50%!important;
+
+        right:auto!important;
+
+        transform:
+        translate(-50%,-50%);
+
+        text-align:center!important;
+    }
+
+    .story-text h1{
+
+        font-size:3rem;
+    }
+}

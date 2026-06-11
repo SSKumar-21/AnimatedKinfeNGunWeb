@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knife N Gun</title>
+
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="./media/icon.png">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/btn.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/hero.css">
+    <link rel="stylesheet" href="./styles/role.css">
+    <link rel="stylesheet" href="./styles/story.css">
+    <link rel="stylesheet" href="./styles/contact.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chelsea+Market&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LOADER -->
+
+    <div id="loader">
+
+        <div class="loader-box">
+
+            <h1>KNIFE N GUN</h1>
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <p id="texting">
+                <span id="percent">0</span>%
+                • PREPARING INVESTIGATION...
+            </p>
+
+            <button class="ui-btn" id="enterBtn">
+                <span>ENTER INVESTIGATION</span>
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MAIN WEBSITE -->
+
+    <div id="main">
+
+        <!-- hero -->
+        <section class="hero">
+
+            <!-- Background Video -->
+
+            <video
+                id="heroVideo"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto">
+
+                <source src="./media/main.mp4" type="video/mp4">
+
+            </video>
+
+
+            <!-- NAVBAR  -->
+
+            <nav class="navbar">
+
+                <div class="logo">
+                    KNIFE N GUN
+                </div>
+            
+                <div class="nav-links">
+            
+                    <a href="#main">Home</a>
+                    <a href="#roles-section">Roles</a>
+                    <a href="#story">Story</a>
+                    <a href="#About">About</a>
+                    <a href="#contact">Contact</a>
+            
+                    <button id="musicBtn" class="music-btn">
+
+                        <svg id="musicIcon"
+                             width="22"
+                             height="22"
+                             viewBox="0 0 24 24"
+                             fill="currentColor">
+                    
+                            <path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/>
+                    
+                        </svg>
+                    
+                    </button>
+            
+                </div>
+            
+            </nav>
+            
+            <audio id="bgMusic" loop>
+                <source src="./media/music.mp3" type="audio/mpeg">
+            </audio>
+
+
+            <!--  HUGE TEXT -->
+
+            <h1 class="bigText1">
+                TRUST
+            </h1>
+
+            <h1 class="bigText2">
+                NO ONE
+            </h1>
+
+
+            <!--   LEFT CONTENT  -->
+
+            <div class="hero-left">
+
+                <p>
+                    Every player hides a secret.
+                    Every vote changes fate.
+                    Find the killer before the next victim falls.
+                </p>
+
+                <button class="hero-btn">
+                    WATCH TRAILER
+                </button>
+
+            </div>
+
+
+            <!--   CENTER FLOATING VIDEO  -->
+
+            <div class="video-card">
+
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline>
+
+                    <source src="./media/mainSmall.mp4" type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+        <section class="About" id="About">
+
+            <div class="bg1"></div>
+            <div class="bg2"></div>
+        
+            <div class="about-story">
+        
+                <div class="story-text " id="text2">
+        
+                    <span class="role-tag">
+                        ROLE SWITCH
+                    </span>
+        
+                    <h1>
+                        THE KILLER
+                    </h1>
+        
+                    <p>
+                        Everyone looks innocent.
+                        Hidden among the players,
+                        the Killer waits for the perfect
+                        moment to strike.
+                    </p>
+        
+                </div>
+        
+                <div class="story-text active" id="text1">
+        
+                    <span class="role-tag">
+                        ROLE SWITCH
+                    </span>
+        
+                    <h1>
+                        THE DETECTIVE
+                    </h1>
+        
+                    <p>
+                        Every clue matters.
+                        Follow the evidence,
+                        uncover the lies,
+                        and expose the murderer.
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+        </section>
+        </section>
+
+
+        <!-- Role  -->
+        <section class="roles-section" id="roles-section">
+
+            <!-- Dynamic Background Image -->
+            <div class="role-background">
+        
+                <img
+                    id="roleBgImage"
+                    src="./media/killerBG.png"
+                    alt="Role Background">
+        
+            </div>
+        
+            <div class="role-content">
+        
+                <!-- Left Content -->
+                <div class="role-text">
+        
+                    <span id="roleNumber">
+                        ROLE #01
+                    </span>
+        
+                    <h1 id="roleName">
+                        KILLER
+                    </h1>
+        
+                    <div class="line"></div>
+        
+                    <p id="roleDesc">
+                        A ruthless mastermind hiding among the players.
+                        Every night he chooses a victim and silently
+                        removes them from the game.
+                    </p>
+        
+                    <button class="role-btn">
+                        LEARN MORE
+                    </button>
+        
+                </div>
+        
+                <!-- Right Character -->
+                <div class="role-image-container">
+        
+                    <div class="glow"></div>
+        
+                    <div class="energy-ring"></div>
+        
+                    <img
+                        id="roleImage"
+                        src="./media/killer.png"
+                        alt="Character">
+        
+                </div>
+        
+            </div>
+        
+            <!-- Navigation Dots -->
+            <div class="role-dots">
+        
+                <span
+                    class="dot active"
+                    data-index="0">
+                </span>
+        
+                <span
+                    class="dot"
+                    data-index="1">
+                </span>
+        
+                <span
+                    class="dot"
+                    data-index="2">
+                </span>
+        
+                <span
+                    class="dot"
+                    data-index="3">
+                </span>
+        
+            </div>
+        
+        </section>
+        <!-- story -->
+        <section class="story-section" id="story">
+
+            <div class="story-glow"></div>
+        
+            <div class="story-header">
+        
+                <span>LORE</span>
+        
+                <h1>
+                    THE STORY OF
+                    <br>
+                    KNIFE N GUN
+                </h1>
+        
+            </div>
+        
+            <div class="story-container">
+        
+                <div class="story-image-wrapper">
+        
+                    <img
+                    src="./media/story.png"
+                    class="story-image"
+                    id="storyImage">
+        
+                </div>
+        
+                <div class="story-content">
+        
+                    <p>
+                        A peaceful town once thrived under the cover
+                        of darkness. But strange murders began to
+                        occur every night. Fear spread quickly.
+        
+                        Nobody knew who to trust.
+        
+                        Hidden among ordinary citizens, ruthless
+                        killers silently hunted their victims while
+                        detectives raced against time to uncover the
+                        truth.
+        
+                        Every discussion could save a life.
+        
+                        Every vote could condemn the innocent.
+                    </p>
+        
+                </div>
+        
+            </div>
+        
+            <div class="story-timeline">
+        
+                <div class="timeline-item active">
+                    Investigation
+                </div>
+        
+                <div class="timeline-line"></div>
+        
+                <div class="timeline-item">
+                    Murder
+                </div>
+        
+                <div class="timeline-line"></div>
+        
+                <div class="timeline-item">
+                    Trial
+                </div>
+        
+                <div class="timeline-line"></div>
+        
+                <div class="timeline-item">
+                    Survival
+                </div>
+        
+            </div>
+        
+        </section>
+
+
+        <!-- contact -->
+        <section class="contact-section" id="contact">
+
+            <div class="contact-bg"></div>
+        
+            <div class="contact-particles"></div>
+        
+            <div class="contact-container">
+        
+                <div class="contact-left">
+        
+                    <span>FINAL REPORT</span>
+        
+                    <h1>
+                        THE INVESTIGATION
+                        <br>
+                        NEVER ENDS
+                    </h1>
+        
+                    <p>
+                        Every mystery leaves behind traces.
+                        Every story leaves behind a witness.
+        
+                        If you reached this point,
+                        you uncovered the truth behind
+                        Knife N Gun.
+        
+                        But one final file remains...
+                    </p>
+        
+                    <div class="case-file">
+        
+                        <h3>CASE FILE #2505</h3>
+        
+                        <p>
+                            Identity:
+                            UNKNOWN
+                        </p>
+        
+                        <p>
+                            Role:
+                            CREATOR
+                        </p>
+        
+                        <p>
+                            Status:
+                            OBSERVING
+                        </p>
+        
+                    </div>
+        
+                </div>
+        
+                <div class="contact-right">
+        
+                    <img
+                    src="./media/developer.png"
+                    class="developer-image"
+                    id="developerImage">
+        
+                    <div class="developer-glow"></div>
+        
+                </div>
+        
+            </div>
+        
+            <div class="hidden-links">
+        
+                <a
+                href="mailto:sskumar20sign@gmail.com"
+                target="_blank">
+        
+                    ACCESS FILE 01
+        
+                </a>
+        
+                <a
+                href="https://github.com/SSKumar-21"
+                target="_blank">
+        
+                    ACCESS FILE 02
+        
+                </a>
+        
+                <a
+                href="https://www.linkedin.com/in/sidharth-kumar-059269294/"
+                target="_blank">
+        
+                    ACCESS FILE 03
+        
+                </a>
+        
+            </div>
+        
+        </section>
+    </div>
+
+
+    </div>
+
+    <script src="./script/index.js"></script>
+    <script src="./script/hero.js"></script>
+    <script src="./script/music.js"></script>
+    <script src="./script/about.js"></script>
+    <script src="./script/role.js"></script>
+    <script src="./script/story.js"></script>
+    <script src="./script/contact.js"></script>
+
+</body>
+</html>

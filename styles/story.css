@@ -1,0 +1,181 @@
+.story-section{
+
+    min-height:100vh;
+
+    background:#050816;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 8%;
+}
+
+.story-glow{
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(46,158,255,.15),
+    transparent);
+
+    top:20%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    filter:blur(120px);
+
+    pointer-events:none;
+}
+
+.story-header{
+
+    text-align:center;
+
+    margin-bottom:80px;
+}
+
+.story-header span{
+
+    color:#2e9eff;
+
+    letter-spacing:5px;
+}
+
+.story-header h1{
+
+    font-size:6rem;
+
+    color:white;
+
+    font-weight:900;
+
+    line-height:1;
+
+    margin-top:15px;
+
+    text-shadow:
+    0 0 30px rgba(255,255,255,.2);
+    font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.story-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+    font-family: "Chelsea Market", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.story-image-wrapper{
+
+    width:650px;
+
+    transform:
+    rotate(-8deg);
+
+    transition:.5s;
+}
+
+.story-image-wrapper:hover{
+
+    transform:
+    rotate(-4deg)
+    scale(1.03);
+}
+
+.story-image{
+
+    width:100%;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 50px rgba(46,158,255,.25);
+}
+
+.story-content{
+
+    max-width:500px;
+}
+
+.story-content p{
+
+    color:#d7d7d7;
+
+    font-size:1.15rem;
+
+    line-height:2;
+}
+
+.story-timeline{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:100px;
+}
+
+.timeline-item{
+
+    color:white;
+
+    font-weight:600;
+}
+
+.timeline-line{
+
+    width:120px;
+    height:2px;
+
+    background:#2e9eff;
+
+    margin:0 15px;
+}
+
+@media(max-width:1000px){
+
+    .story-container{
+
+        flex-direction:column;
+    }
+
+    .story-image-wrapper{
+
+        width:100%;
+    }
+
+    .story-header h1{
+
+        font-size:3.5rem;
+    }
+
+    .story-timeline{
+
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .timeline-line{
+
+        width:2px;
+        height:50px;
+    }
+}

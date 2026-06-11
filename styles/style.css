@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    font-family: "Chelsea Market", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ====================================
+   LOADING PAGE
+==================================== */
+
+#loader{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,0,0,.15),
+    transparent 30%),
+
+    radial-gradient(circle at bottom left,
+    rgba(255,215,0,.1),
+    transparent 30%),
+
+    #050505;
+
+    z-index:9999;
+    transition:1s;
+}
+
+#loader::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        rgba(255,255,255,.02) 1px,
+        transparent 2px
+    );
+
+    pointer-events:none;
+}
+
+.loader-box{
+
+    width:1000px;
+
+    padding:50px;
+
+    /* border:1px solid rgba(255,215,0,.2); */
+    
+
+    /* background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 0 20px rgba(255,215,0,.1),
+    0 0 60px rgba(255,0,0,.08); */
+
+    position:relative;
+}
+
+.loader-box::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 30px,
+        rgba(255,255,255,.02) 31px
+    );
+
+    pointer-events:none;
+}
+
+.loader-box h1{
+
+    color:#d4af37;
+
+    font-size:4rem;
+
+    letter-spacing:8px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+    font-family: "Black Ops One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    text-shadow:
+    0 0 10px rgba(212,175,55,.5),
+    0 0 30px rgba(212,175,55,.2);
+}
+
+.progress-container{
+
+    width:100%;
+    height:10px;
+
+    background:#111;
+
+    border:1px solid rgba(212,175,55,.3);
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+#progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+    90deg,
+    #5a3d00,
+    #d4af37,
+    #ffe27a
+    );
+
+    box-shadow:
+    0 0 10px gold,
+    0 0 25px gold;
+
+    transition:.1s;
+}
+
+.loader-box p{
+
+    color:#bdbdbd;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+/* ====================================
+   BUTTON
+==================================== */
+
+#enterBtn{
+    display:none;
+    margin-top:30px;
+}
+
+/* ====================================
+   STATUS TEXT
+==================================== */
+
+.status{
+
+    color:#ff4040;
+
+    margin-top:20px;
+
+    font-size:13px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 0 10px red;
+}
+
+/* ====================================
+   BLINK ANIMATION
+==================================== */
+
+@keyframes smoothBlink {
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.3;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+.blinking-element{
+    animation:smoothBlink 2s infinite ease-in-out;
+}
+
+/* ====================================
+   MAIN PAGE
+==================================== */
+
+#main{
+    display:none;
+    width:100vw;
+    height:100vh;
+    position:relative;
+}
+
+#heroVideo{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.content{
+    position:relative;
+    z-index:10;
+    color:white;
+}
+
+
+

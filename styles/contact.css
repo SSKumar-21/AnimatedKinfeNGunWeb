@@ -1,0 +1,195 @@
+.contact-section{
+
+    min-height:100vh;
+
+    background:#040816;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:120px 8%;
+}
+
+.contact-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+    circle at 70% 50%,
+    rgba(255,215,0,.12),
+    transparent 40%),
+
+    radial-gradient(
+    circle at 20% 50%,
+    rgba(46,158,255,.12),
+    transparent 40%);
+}
+
+.contact-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.contact-left{
+
+    width:45%;
+}
+
+.contact-left span{
+
+    color:#ffd700;
+
+    letter-spacing:4px;
+}
+
+.contact-left h1{
+
+    font-size:5rem;
+
+    color:white;
+
+    margin:20px 0;
+
+    line-height:1;
+
+    text-shadow:
+    0 0 40px rgba(255,215,0,.3);
+}
+
+.contact-left p{
+
+    color:#d5d5d5;
+
+    line-height:2;
+}
+
+.case-file{
+
+    margin-top:40px;
+
+    padding:30px;
+
+    border:1px solid
+    rgba(255,255,255,.1);
+
+    backdrop-filter:
+    blur(15px);
+
+    border-radius:15px;
+}
+
+.case-file h3{
+
+    color:#ffd700;
+
+    margin-bottom:20px;
+}
+
+.contact-right{
+
+    position:relative;
+}
+
+.developer-image{
+
+    height:800px;
+
+    position:relative;
+
+    z-index:2;
+
+    animation:
+    floatDev 5s ease-in-out infinite;
+}
+
+.developer-glow{
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:
+    radial-gradient(
+    circle,
+    rgba(255,215,0,.4),
+    transparent);
+
+    filter:blur(100px);
+
+    z-index:1;
+
+    top:50%;
+
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+}
+
+.hidden-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:80px;
+
+    position:relative;
+
+    z-index:3;
+}
+
+.hidden-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border:1px solid
+    rgba(255,255,255,.15);
+
+    border-radius:50px;
+
+    transition:.4s;
+}
+
+.hidden-links a:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px #ffd700;
+}
+
+@keyframes floatDev{
+
+    0%,100%{
+
+        transform:
+        translateY(0);
+    }
+
+    50%{
+
+        transform:
+        translateY(-20px);
+    }
+}
